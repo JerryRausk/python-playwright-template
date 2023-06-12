@@ -4,15 +4,8 @@ import re
 from playwright.sync_api import Page, expect
 
 
-def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_intro_page(page: Page):
-    # Github hides secrets in console
-    first = os.environ["USERNAME_HERE"]
-    first_again = "This is the first " + first
-    second = os.environ["PASSWORD_HERE"]
-    second_again = "This is the second " + second
-
-    
-    page.goto("https://playwright.dev/")
+def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_intro_page(page: Page):  
+    page.goto(os.environ["MY_PAGE"])
 
     # Expect a title "to contain" a substring.
     expect(page).to_have_title(re.compile("Playwright"))
@@ -28,5 +21,3 @@ def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_in
 
     # Expects the URL to contain intro.
     expect(page).to_have_url(re.compile(".*intro"))
-    print(first_again)
-    print(second_again)

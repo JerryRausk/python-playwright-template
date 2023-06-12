@@ -1,7 +1,7 @@
 name: Playwright Automation
 on:
   schedule:
-  - cron: "3 * * * *"
+  - cron: "20 * * * *"
   push:
     paths:
       - '**.*'
@@ -26,4 +26,5 @@ jobs:
       run: pytest -s
       env:
         USERNAME_HERE: ${{ secrets.USERNAME }} 
-        PASSWORD_HERE: ${{ secrets.PASSWORD }} 
+        PASSWORD_HERE: ${{ secrets.PASSWORD }}
+        MY_PAGE: ${{ secrets.SUPER_SECRET_PAGE }}
