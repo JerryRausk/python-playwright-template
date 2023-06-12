@@ -1,7 +1,7 @@
 name: Playwright Automation
 on:
   schedule:
-  - cron: "32 * * * *"
+  - cron: "32- * * * *"
   push:
     paths:
       - '**.*'
