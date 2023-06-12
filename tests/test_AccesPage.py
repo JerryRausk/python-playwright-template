@@ -8,7 +8,7 @@ def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_in
     # Github hides secrets in console
     first = os.environ["USERNAME_HERE"]
     first_again = "This is the first " + first
-    second = os.evniron["PASSWORD_HERE"]
+    second = os.environ["PASSWORD_HERE"]
     second_again = "This is the second " + second
 
     
