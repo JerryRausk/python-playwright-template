@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright Automation
 on:
   schedule:
     - cron:  '12/5 * * * *'
@@ -20,3 +20,6 @@ jobs:
       run: python -m playwright install --with-deps
     - name: Run your tests
       run: pytest
+      env:
+        USERNAME_HERE: ${{ secrets.USERNAME }} 
+        PASSWORD_HERE: ${{ secrets.PASSWORD }} 
