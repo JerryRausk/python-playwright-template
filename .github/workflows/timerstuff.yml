@@ -1,7 +1,11 @@
 name: Playwright Automation
 on:
   schedule:
-    - cron:  '12/5 * * * *'
+    - cron:  '25 20 * * *'
+  push:
+    paths:
+      - '**.*'
+  
 jobs:
   test:
     timeout-minutes: 60
